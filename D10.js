@@ -190,10 +190,23 @@ console.log(isTodayMyBirthday())
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+const deleteProp = (obj, prop) => {
+  if (obj.hasOwnProperty(prop)) {
+    delete obj[prop];
+  }
+  return obj;
+};
 
-/* ESERCIZIO 12
-  Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
-*/
+// Esempio di utilizzo
+const person = {
+  name: "Alice",
+  age: 30,
+  job: "Developer"
+};
+
+console.log(deleteProp(person, "age")); 
+ 
+
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
